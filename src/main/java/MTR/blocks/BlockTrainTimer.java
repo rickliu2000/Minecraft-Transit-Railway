@@ -10,7 +10,7 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -75,8 +75,8 @@ public class BlockTrainTimer extends BlockBase {
 			worldIn.setBlockState(pos, state.cycleProperty(TIME));
 			int time = worldIn.getBlockState(pos).getValue(TIME);
 			if (!worldIn.isRemote)
-				playerIn.addChatComponentMessage(new TextComponentString(I18n.format("gui.timertext", new Object[0])
-						+ " " + times[time] + " " + I18n.format("gui.seconds", new Object[0])));
+				playerIn.addChatComponentMessage(new TextComponentString(I18n.translateToLocal("gui.timertext", new Object[0])
+						+ " " + times[time] + " " + I18n.translateToLocal("gui.seconds", new Object[0])));
 			return true;
 		} else
 			return false;
