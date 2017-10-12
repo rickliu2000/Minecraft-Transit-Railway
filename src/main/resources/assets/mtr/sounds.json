@@ -1,5 +1,7 @@
 {
 	"train.doorclose": {
+		"category": "master",
+		"subtitle": "train.doorclose",
 		"sounds": [
 		{
 			"name": "mtr:train/DoorClose",
@@ -9,6 +11,8 @@
 		]
 	},
 	"train.doorclosetrain": {
+		"category": "master",
+		"subtitle": "train.doorclosetrain",
 		"sounds": [
 		{
 			"name": "mtr:train/DoorCloseTrain",
@@ -18,6 +22,8 @@
 		]
 	},
 	"train.doorcloseplatform": {
+		"category": "master",
+		"subtitle": "train.doorcloseplatform",
 		"sounds": [
 		{
 			"name": "mtr:train/DoorClosePlatform",
@@ -27,6 +33,8 @@
 		]
 	},
 	"train.dooropen": {
+		"category": "master",
+		"subtitle": "train.dooropen",
 		"sounds": [
 		{
 			"name": "mtr:train/DoorOpen",
@@ -36,6 +44,8 @@
 		]
 	},
 	"platform.apgclose": {
+		"category": "master",
+		"subtitle": "platform.apgclose",
 		"sounds": [
 		{
 			"name": "mtr:platform/APGClose",
@@ -44,6 +54,8 @@
 		]
 	},
 	"platform.apgopen": {
+		"category": "master",
+		"subtitle": "platform.apgopen",
 		"sounds": [
 		{
 			"name": "mtr:platform/APGOpen",
@@ -52,6 +64,8 @@
 		]
 	},
 	"platform.psdclose": {
+		"category": "master",
+		"subtitle": "platform.psdclose",
 		"sounds": [
 		{
 			"name": "mtr:platform/PSDClose",
@@ -60,6 +74,8 @@
 		]
 	},
 	"platform.psdopen": {
+		"category": "master",
+		"subtitle": "platform.psdopen",
 		"sounds": [
 		{
 			"name": "mtr:platform/PSDOpen",
@@ -68,6 +84,8 @@
 		]
 	},
 	"lightrail1.doorclose": {
+		"category": "master",
+		"subtitle": "lightrail1.doorclose",
 		"sounds": [
 		{
 			"name": "mtr:lightrail1/DoorClose",
@@ -76,6 +94,8 @@
 		]
 	},
 	"lightrail1.dooropen": {
+		"category": "master",
+		"subtitle": "lightrail1.dooropen",
 		"sounds": [
 		{
 			"name": "mtr:lightrail1/DoorOpen",
@@ -84,6 +104,8 @@
 		]
 	},
 	"sp1900.doorclose": {
+		"category": "master",
+		"subtitle": "sp1900.doorclose",
 		"sounds": [
 		{
 			"name": "mtr:sp1900/DoorClose",
@@ -92,6 +114,8 @@
 		]
 	},
 	"sp1900.dooropen": {
+		"category": "master",
+		"subtitle": "sp1900.dooropen",
 		"sounds": [
 		{
 			"name": "mtr:sp1900/DoorOpen",
