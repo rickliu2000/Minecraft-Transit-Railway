@@ -59,6 +59,9 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 	private int radius, centerX, centerZ;
 	public int leftDoor = -40, rightDoor = -40;
 	protected boolean front;
+    private static final DataParameter<Boolean> MTR_FRONT = EntityDataManager
+    .<Boolean>createKey(EntityTrainBase.class, DataSerializers.BOOLEAN);
+    private boolean mtrFront;
 
 	private Ticket trainTicket;
 	private static List<Ticket> allTickets;
@@ -225,14 +228,27 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 		if (mtrSpeed == 0) {
 			mtrDoorLeft = getLeftDoor();
 			mtrDoorRight = getRightDoor();
-			if (leftDoor < 60 && mtrDoorLeft)
-				leftDoor++;
-			if (rightDoor < 60 && mtrDoorRight)
-				rightDoor++;
-			if (leftDoor > 0 && !mtrDoorLeft)
-				leftDoor--;
-			if (rightDoor > 0 && !mtrDoorRight)
-				rightDoor--;
+            mtrFront=getFront();
+            if (mtrFront){
+                if (leftDoor < 60 && mtrDoorLeft)
+                    leftDoor++;
+                if (rightDoor < 60 && mtrDoorRight)
+                    rightDoor++;
+                if (leftDoor > 0 && !mtrDoorLeft)
+                    leftDoor--;
+                if (rightDoor > 0 && !mtrDoorRight)
+                    rightDoor--;
+            }
+            if (!mtrFront){
+                if (rightDoor < 60 && mtrDoorLeft)
+                    rightDoor++;
+                if (leftDoor < 60 && mtrDoorRight)
+                    leftDoor++;
+                if (rightDoor > 0 && !mtrDoorLeft)
+                    rightDoor--;
+                if (leftDoor > 0 && !mtrDoorRight)
+                    leftDoor--;
+            }
 		}
 
 		if (isBeingRidden() && getPassengers().contains(Minecraft.getMinecraft().thePlayer)) {
@@ -353,6 +369,7 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 			radius = -radius;
 			if (isNormalTrain)
 				front = !front;
+                dataManager.set(MTR_FRONT, front);
 		}
 	}
 
@@ -443,6 +460,10 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 	private boolean getRightDoor() {
 		return dataManager.get(MTR_DOORRIGHT);
 	}
+    
+    private boolean getFront() {
+        return dataManager.get(MTR_FRONT);
+    }
 
 	private int getWheelID() {
 		if (mtrWheelID == 0)
@@ -779,6 +800,7 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 		dataManager.register(MTR_YAW, 0F);
 		dataManager.register(MTR_PITCH, 0F);
 		dataManager.register(MTR_SPEED, 0F);
+        dataManager.register(MTR_FRONT, true);
 	}
 
 	@Override
