@@ -43,9 +43,9 @@ public class EntityMinecartSpecial extends EntityTrainBase {
 			if (itemStack1 != null && itemStack1.getItem() instanceof ItemPickaxe
 					|| itemStack2 != null && itemStack2.getItem() instanceof ItemPickaxe)
 				if (!worldObj.isRemote)
-					for (int a = -1; a <= 1; a++)
-						for (int b = 0; b <= 3; b++)
-							for (int c = -1; c <= 1; c++) {
+					for (int a = -2; a <= 2; a++)
+						for (int b = 0; b <= 4; b++)
+							for (int c = -2; c <= 2; c++) {
 								BlockPos pos = getPosition().add(a, b, c);
 								if (!worldObj.isAirBlock(pos)) {
 									IBlockState state = worldObj.getBlockState(pos);
