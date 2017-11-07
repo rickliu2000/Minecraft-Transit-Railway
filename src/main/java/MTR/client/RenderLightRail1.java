@@ -1,7 +1,7 @@
 package MTR.client;
 
 import java.io.IOException;
-
+import java.util.stream.IntStream;
 import MTR.EntityLightRail1;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
@@ -10,7 +10,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderLightRail1 extends RenderTrain<EntityLightRail1> {
 
-	private ModelLightRail1 model = new ModelLightRail1();
+	private ModelJKBus model = new ModelJKBus();
+    //private ModelLightRail1 model = new ModelLightRail1();
 
 	public RenderLightRail1(RenderManager renderManager) {
 		super(renderManager);
@@ -18,7 +19,32 @@ public class RenderLightRail1 extends RenderTrain<EntityLightRail1> {
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityLightRail1 entity) {
-		return new ResourceLocation("mtr:textures/entity/EntityLightRail1.png");
+        int route = entity.getRoute();
+        int[] CB = {11};
+        int[] JiangNan = {2};
+        int[] Argos = {};
+        int[] MTR = {};
+        boolean isCB = false;
+        boolean isJiangNan = false;
+        boolean isArogs = false;
+        boolean isMTR=false;
+        boolean isGPD=false; //bus will wear xx if is true
+        boolean p;
+        boolean down = route < 0;
+        route = Math.abs(route);
+        p = route >= 1000;
+        if (p)
+            route = route - 1000;
+        final int compareRoute=route;
+        isCB = IntStream.of(CB).anyMatch(x -> x == compareRoute);
+        isJiangNan = IntStream.of(JiangNan).anyMatch(x -> x == compareRoute);
+        ResourceLocation skin = new ResourceLocation("mtr:textures/entity/EntityLightRail1.png");
+        if (isCB){
+            skin = new ResourceLocation("mtr:textures/entity/skins/CB.png");
+        } else if (isJiangNan){
+            skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanTest.png");
+        }
+        return skin;
 	}
 
 	@Override
