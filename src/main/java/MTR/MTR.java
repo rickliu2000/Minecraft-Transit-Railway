@@ -98,6 +98,7 @@ public class MTR {
 		EntityRegistry.registerModEntity(EntityMinecartSpecial.class, "MinecartSpecial", 0, this, 80, 1, false);
 		EntityRegistry.registerModEntity(EntityLightRail1.class, "LightRail1", 1, this, 256, 1, false);
 		EntityRegistry.registerModEntity(EntitySP1900.class, "SP1900", 2, this, 256, 1, false);
+        EntityRegistry.registerModEntity(EntityJKBus.class, "JKBus", 3, this, 256, 1, false);
 		// tile entities
 		GameRegistry.registerTileEntity(TileEntityClockEntity.class, "MTRClock");
 		GameRegistry.registerTileEntity(TileEntityAPGGlassEntity.class, "APGGlass");

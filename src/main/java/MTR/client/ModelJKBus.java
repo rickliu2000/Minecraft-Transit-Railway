@@ -137,7 +137,7 @@ public class ModelJKBus extends ModelBase {
 		Back = MathTools.part(this, 150, 200, 0, 0, -1F, 26, 46, 1, -13F, -34F, 356F - shift, 600, 480);
 		LeftFrontWall = MathTools.part(this, 70, 130, 0, 0, 0, 1, 50, 33, 19F, -34F, 7F - shift, 600, 480);
 		RightFrontWall = MathTools.part(this, 0, 130, 0, 0, 0, 1, 50, 33, -20F, -34F, 7F - shift, 600, 480);
-		FrontDisplay = MathTools.part(this, 150, 320, 0, 0, 0, 40, 9, 9, -20F, -34F, 10 - shift, 600, 480);
+		FrontDisplay = MathTools.part(this, 151, 320, 0, 0, 0, 40, 9, 9, -21F, -34F, 9 - shift, 600, 480);
 		Front = MathTools.part(this, 135, 135, 0, 0, 0, 40, 18, 0, -20F, -7F, 7F - shift, 600, 480);
 		LeftOuterBar = MathTools.part(this, 0, 165, 0, 0, 0, 3, 3, 288, 18F, -27F, 40 - shift, 600, 480);
 		RightOuterBar = MathTools.part(this, 0, 165, 0, 0, 0, 2, 0, 288, -20, -24F, 40 - shift, 600, 480);
@@ -246,7 +246,7 @@ public class ModelJKBus extends ModelBase {
 
 		textureWidth = 18;
 		textureHeight = 5;
-		DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 18, 5, 0, -9F, -32F, 10 - shift, 18, 5);
+		DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 18, 5, 0, -9F, -32F, 9 - shift, 18, 5);
 
 		textureWidth = 22;
 		textureHeight = 6;
@@ -267,8 +267,8 @@ public class ModelJKBus extends ModelBase {
 		setRotation(Roof7, 0, (float) Math.PI, 0);
 		setRotation(Roof7L, 0, -0.2449786F, 0);
 		setRotation(Roof7R, 0, 0.2449786F, 0);
-		setRotation(Floor1L, 0, -2.896618F, 0);
-		setRotation(Floor1R, 0, 2.896618F, 0);
+		setRotation(Floor1L, 0, -3.141592653589793F, 0);
+		setRotation(Floor1R, 0, -3.141592653589793F, 0);
 		setRotation(Floor7, 0, (float) Math.PI, 0);
 		setRotation(Floor7L, 0, -0.2449786F, 0);
 		setRotation(Floor7R, 0, 0.2449786F, 0);
