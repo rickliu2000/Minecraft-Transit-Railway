@@ -63,12 +63,12 @@ public class RenderJKBus extends RenderTrain<EntityJKBus> {
 
 		model.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 
-		leftDoor = 1 - leftDoor;
-		if (leftDoor < 1)
-			leftDoor = (float) (-7.9D * Math.pow(leftDoor, 3) + 12.66D * Math.pow(leftDoor, 2) - 5.75D * leftDoor + 1D);
+		rightDoor = 1 - rightDoor;
+		if (rightDoor < 1)
+			rightDoor = (float) (-7.9D * Math.pow(rightDoor, 3) + 12.66D * Math.pow(rightDoor, 2) - 5.75D * rightDoor + 1D);
 		else
-			leftDoor = 0;
-		model.renderDoors(0.0625F, leftDoor);
+			rightDoor = 0;
+		model.renderDoors(0.0625F, rightDoor);
 
 		GlStateManager.disableLighting();
 		bindTexture(texture2);
