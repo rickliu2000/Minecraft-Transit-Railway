@@ -38,11 +38,11 @@ public class RenderJKBus extends RenderTrain<EntityJKBus> {
         final int compareRoute=route;
         isCB = IntStream.of(CB).anyMatch(x -> x == compareRoute);
         isJiangNan = IntStream.of(JiangNan).anyMatch(x -> x == compareRoute);
-        ResourceLocation skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanTest.png");
+        ResourceLocation skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanJK.png");
         if (isCB){
-            skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanTest.png");
+            skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanJK.png");
         } else if (isJiangNan){
-            skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanTest.png");
+            skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanJK.png");
         }
         return skin;
 	}

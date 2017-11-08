@@ -119,6 +119,7 @@ public class ModelJKBus extends ModelBase {
 	ModelRenderer Side5R;
 	ModelRenderer Side6R;
 	ModelRenderer SideDisplay;
+    ModelRenderer SideDisplayFront;
 	ModelRenderer SideDisplay2;
 	ModelRenderer DBack;
 	ModelRenderer DFront;
@@ -134,10 +135,10 @@ public class ModelJKBus extends ModelBase {
 		RightWall = MathTools.part(this, 0, -288, 0, 0, 0, 0, 8, 288, -20, 8F, 40 - shift, 600, 480);
 		LeftWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 7, 288, 20, -34F, 40 - shift, 600, 480);
 		RightWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 10, 288, -20, -34F, 40 - shift, 600, 480);
-		Back = MathTools.part(this, 150, 200, 0, 0, -1F, 26, 46, 1, -13F, -34F, 356F - shift, 600, 480);
+		Back = MathTools.part(this, 150, 200, 0, 0, -1F, 40, 46, 1, -20F, -34F, 357F - shift, 600, 480);
 		LeftFrontWall = MathTools.part(this, 70, 130, 0, 0, 0, 1, 50, 33, 19F, -34F, 7F - shift, 600, 480);
 		RightFrontWall = MathTools.part(this, 0, 130, 0, 0, 0, 1, 50, 33, -20F, -34F, 7F - shift, 600, 480);
-		FrontDisplay = MathTools.part(this, 151, 320, 0, 0, 0, 40, 9, 9, -21F, -34F, 9 - shift, 600, 480);
+		FrontDisplay = MathTools.part(this, 151, 320, 0, 0, 0, 40, 9, 9, -20F, -34F, 9 - shift, 600, 480);
 		Front = MathTools.part(this, 135, 135, 0, 0, 0, 40, 18, 0, -20F, -7F, 7F - shift, 600, 480);
 		LeftOuterBar = MathTools.part(this, 0, 165, 0, 0, 0, 3, 3, 288, 18F, -27F, 40 - shift, 600, 480);
 		RightOuterBar = MathTools.part(this, 0, 165, 0, 0, 0, 2, 0, 288, -20, -24F, 40 - shift, 600, 480);
@@ -150,12 +151,12 @@ public class ModelJKBus extends ModelBase {
 		LeftBar = MathTools.part(this, 0, -266, 0, 0, 0, 0, 12, 288, 18F, -24F, 40 - shift, 600, 480);
 		RightBar = MathTools.part(this, 0, -252, 0, 0, 0, 0, 12, 288, -18F, -24F, 40 - shift, 600, 480);
 		FrontPanel = MathTools.part(this, 205, 150, 0, 0, 0, 38, 38, 1, -19F, -30, 40 - shift, 600, 480);
-		Panel1 = MathTools.part(this, 205, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 68F - shift, 600, 480);
-		Panel2 = MathTools.part(this, 205, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 108F - shift, 600, 480);
-		Panel3 = MathTools.part(this, 205, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 164F - shift, 600, 480);
-		Panel4 = MathTools.part(this, 205, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 204F - shift, 600, 480);
-		Panel5 = MathTools.part(this, 205, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 260 - shift, 600, 480);
-		Panel6 = MathTools.part(this, 205, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 300 - shift, 600, 480);
+		Panel1 = MathTools.part(this, 245, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 68F - shift, 600, 480);
+		Panel2 = MathTools.part(this, 245, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 108F - shift, 600, 480);
+		Panel3 = MathTools.part(this, 245, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 164F - shift, 600, 480);
+		Panel4 = MathTools.part(this, 245, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 204F - shift, 600, 480);
+		Panel5 = MathTools.part(this, 245, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 260 - shift, 600, 480);
+		Panel6 = MathTools.part(this, 245, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 300 - shift, 600, 480);
 		Roof1 = MathTools.part(this, 0, 90, 0, 0, 0, 26, 4, 30, -13F, -34F, 10 - shift, 600, 480);
 		Roof1L = MathTools.part(this, 0, 310, 0, 0, 0, 8, 4, 30, 12, -30F, 40 - shift, 600, 480);
 		Roof1R = MathTools.part(this, 0, 310, -8F, 0, 0, 8, 4, 30, -20, -34F, 40 - shift, 600, 480);
@@ -238,11 +239,12 @@ public class ModelJKBus extends ModelBase {
 		Side5R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 296F - shift, 600, 480);
 		Side6R = MathTools.part(this, 450, 320, 0, 0, 0, 1, 32, 32, -20, -24F, 296F - shift, 600, 480);
 		SideDisplay = MathTools.part(this, 10, 50, 0, 0, 0, 2, 7, 24, 17F, -24F, 236F - shift, 600, 480);
+        SideDisplayFront = MathTools.part(this, 10, 50, 0, 0, 0, 2, 7, 24, 17F, -14F, 108F - shift, 600, 480);
 		SideDisplay2 = MathTools.part(this, 65, 50, 0, 0, 0, 1, 4, 24, 17F, -21F, 236F - shift, 600, 480);
 
 		textureWidth = 8;
 		textureHeight = 4;
-		DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 357F - shift, 8, 4);
+		DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 358F - shift, 8, 4);
 
 		textureWidth = 18;
 		textureHeight = 5;
@@ -250,7 +252,7 @@ public class ModelJKBus extends ModelBase {
 
 		textureWidth = 22;
 		textureHeight = 6;
-		DSide1 = MathTools.part(this, 0, 2, -0.1F, 0, 0, 0, 6, 22, 20, -23.5F, 237F - shift, 22, 6);
+		DSide1 = MathTools.part(this, 0, 2, -0.1F, 0, 0, 0, 6, 22, 20, -12F, 108F - shift, 22, 6);
 
 		textureWidth = 24;
 		textureHeight = 3;
@@ -265,13 +267,13 @@ public class ModelJKBus extends ModelBase {
 		setRotation(Roof1L, 3.141592653589793F, 0, 0);
 		setRotation(Roof1R, 0, 3.141592653589793F, 0);
 		setRotation(Roof7, 0, (float) Math.PI, 0);
-		setRotation(Roof7L, 0, -0.2449786F, 0);
-		setRotation(Roof7R, 0, 0.2449786F, 0);
+		setRotation(Roof7L, 0, 0, 0);
+		setRotation(Roof7R, 0, 0, 0);
 		setRotation(Floor1L, 0, -3.141592653589793F, 0);
 		setRotation(Floor1R, 0, -3.141592653589793F, 0);
 		setRotation(Floor7, 0, (float) Math.PI, 0);
-		setRotation(Floor7L, 0, -0.2449786F, 0);
-		setRotation(Floor7R, 0, 0.2449786F, 0);
+		setRotation(Floor7L, 0, 0, 0);
+		setRotation(Floor7R, 0, 0, 0);
 		setRotation(Pole25b, 0, 0, -0.3398331F);
 		setRotation(Pole45b, 0, 0, -0.3398331F);
 		setRotation(HPole2, 0, 0.0698132F, 0);
@@ -287,8 +289,8 @@ public class ModelJKBus extends ModelBase {
 		setRotation(Pole07b, 0, 0, -0.4636467F);
 		setRotation(Pole08b, 0, 0, -0.4636467F);
 		setRotation(HPoleRight, 1.570796F, 0, 0);
-		setRotation(RightBackWall, 0, 0.2449786F, 0);
-		setRotation(LeftBackWall, 0, -0.2449786F, 0);
+		setRotation(RightBackWall, 0, 0, 0);
+		setRotation(LeftBackWall, 0, 0, 0);
 		setRotation(Side2R, 0, (float) Math.PI, 0);
 		setRotation(Side3R, 0, (float) Math.PI, 0);
 		setRotation(Side5R, 0, (float) Math.PI, 0);
@@ -404,6 +406,7 @@ public class ModelJKBus extends ModelBase {
 		Side6R.render(f5);
 		SideDisplay.render(f5);
 		SideDisplay2.render(f5);
+        //SideDisplayFront.render(f5);
 
 		// DBack1.render(f5);
 		// DBack2.render(f5);
