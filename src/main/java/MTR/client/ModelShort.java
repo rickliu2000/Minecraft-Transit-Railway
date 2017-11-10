@@ -41,7 +41,7 @@ public class ModelShort extends ModelBase {
         topBarOutLeft=MathTools.part(this, 0, 15, 0, 0, 0, 1, 7, 196, 19F, -32F, -96f, 600, 480);
         topBarOutRight=MathTools.part(this, 0, 15, 0, 0, 0, 1, 7, 196, -20F, -32F, -96f, 600, 480);
         top=MathTools.part(this, 5, 0, 0, 0, 0, 40, 1, 201, -20F, -32F, -100F, 600, 480);
-        bottom=MathTools.part(this, 5, 0, 0, 0, 0, 40, 1, 201, -20F, 13F, -100F, 600, 480);
+        bottom=MathTools.part(this, 5, 0, 0, 0, 0, 40, 1, 201, -20F, 6F, -100F, 600, 480);
 		
         textureWidth = 8;
 		textureHeight = 4;
