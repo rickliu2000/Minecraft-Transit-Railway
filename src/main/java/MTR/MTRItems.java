@@ -6,6 +6,7 @@ import MTR.items.ItemEscalator;
 import MTR.items.ItemKillTrain;
 import MTR.items.ItemLightRail1;
 import MTR.items.ItemJKBus;
+import MTR.items.ItemShort;
 import MTR.items.ItemMTRPane;
 import MTR.items.ItemMinecartSpecial;
 import MTR.items.ItemPSD;
@@ -24,6 +25,7 @@ public class MTRItems {
 	public static ItemBase itemlightrail1;
 	public static ItemBase itemsp1900;
     public static ItemBase itemjkbus;
+    public static ItemBase itemshort;
 	public static ItemBase itemminecartspecial;
 	public static ItemBase itemapg;
 	public static ItemBase itempsd;
@@ -42,6 +44,7 @@ public class MTRItems {
 		itemlightrail1 = register(new ItemLightRail1());
 		itemsp1900 = register(new ItemSP1900());
         itemjkbus = register(new ItemJKBus());
+        itemshort = register(new ItemShort());
 		itemminecartspecial = register(new ItemMinecartSpecial());
 		itemtrain = register(new ItemTrain());
 		itemapg = register(new ItemAPG());
