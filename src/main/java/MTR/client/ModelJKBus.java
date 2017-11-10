@@ -429,10 +429,25 @@ public class ModelJKBus extends ModelBase {
 	}
 
 	public void renderDoors(float f5, float movedoor) {
-		LeftDoor1.offsetZ = -0.875F * movedoor;
-		RightDoor1.offsetZ = 0.875F * movedoor;
-		LeftDoor2.offsetZ = -0.875F * movedoor;
-		RightDoor2.offsetZ = 0.875F * movedoor;
+		//LeftDoor1.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
+        //LeftDoor1.offsetX  = 0.875F * movedoor;
+		//RightDoor1.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
+       // RightDoor1.offsetX  = 0.875F * movedoor-(float)Math.sin(movedoor*3.14f/2f);
+       // RightDoor1.offsetZ = 0.875F * movedoor;
+        
+        LeftDoor1.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
+        //LeftDoor1.offsetX  = 0.875F * movedoor;
+        RightDoor1.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
+        RightDoor1.offsetX  = (float)Math.sin(0.875F*movedoor*3.14f/2f);
+        RightDoor1.offsetZ = -1F+(float)Math.cos(0.875F*movedoor*3.14f/2f);
+        
+        LeftDoor2.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
+        LeftDoor2.offsetX  = 0.875F * movedoor;
+        RightDoor2.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
+        RightDoor2.offsetX  = 0.875F * movedoor-(float)Math.sin(0.875F*movedoor*3.14f/2f);
+        RightDoor2.offsetZ = 0.875F * movedoor;
+        //LeftDoor2.offsetZ = -0.875F * movedoor;
+		//RightDoor2.offsetZ = 0.875F * movedoor;
 		//LeftDoor3.offsetZ = -0.875F * movedoor;
 		//RightDoor3.offsetZ = 0.875F * movedoor;
 
