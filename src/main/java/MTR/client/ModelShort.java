@@ -5,7 +5,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelJKBus extends ModelBase {
+public class ModelShort extends ModelBase {
 
 	int digit1, digit2, digit3, a;
 	boolean p;
@@ -126,17 +126,17 @@ public class ModelJKBus extends ModelBase {
 	ModelRenderer DFront;
 	ModelRenderer DSide1;
 	ModelRenderer DSide2;
-	final int shift = 184;
+	final int shift = 128;
 
-	public ModelJKBus() {
+	public ModelShort() {
 		textureWidth = 600;
 		textureHeight = 480;
 
-		LeftWall = MathTools.part(this, 0, -278, 0, 0, 0, 0, 8, 288, 20, 8F, 40 - shift, 600, 480);
-		RightWall = MathTools.part(this, 0, -288, 0, 0, 0, 0, 8, 288, -20, 8F, 40 - shift, 600, 480);
-		LeftWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 7, 288, 20, -34F, 40 - shift, 600, 480);
-		RightWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 10, 288, -20, -34F, 40 - shift, 600, 480);
-		Back = MathTools.part(this, 150, 200, 0, 0, -1F, 40, 46, 1, -20F, -34F, 357F - shift, 600, 480);
+		LeftWall = MathTools.part(this, 0, 278, 0, 0, 0, 0, 8, 176, 20, 8F, 40 - shift, 600, 480);
+		RightWall = MathTools.part(this, 0, 278, 0, 0, 0, 0, 8, 176, -20, 8F, 40 - shift, 600, 480);
+		LeftWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 10, 176, 20, -34F, 40 - shift, 600, 480);
+		RightWallTop = MathTools.part(this, 0, 180, 0, 0, 0, 0, 10, 176, -20, -34F, 40 - shift, 600, 480);
+		Back = MathTools.part(this, 150, 200, 0, 0, -1F, 40, 46, 1, -20F, -34F, 216F - shift, 600, 480);
 		LeftFrontWall = MathTools.part(this, 70, 130, 0, 0, 0, 1, 50, 33, 19F, -34F, 7F - shift, 600, 480);
 		RightFrontWall = MathTools.part(this, 0, 130, 0, 0, 0, 1, 50, 33, -20F, -34F, 7F - shift, 600, 480);
 		FrontDisplay = MathTools.part(this, 151, 320, 0, 0, 0, 40, 9, 9, -20F, -34F, 9 - shift, 600, 480);
@@ -145,12 +145,12 @@ public class ModelJKBus extends ModelBase {
 		RightOuterBar = MathTools.part(this, 0, 165, 0, 0, 0, 2, 0, 288, -20, -24F, 40 - shift, 600, 480);
 		LeftDoor1 = MathTools.part(this, 150, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 40F - shift, 600, 480);
 		RightDoor1 = MathTools.part(this, 190, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 56F - shift, 600, 480);
-		LeftDoor2 = MathTools.part(this, 150, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 168F - shift, 600, 480);
-		RightDoor2 = MathTools.part(this, 190, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 184F - shift, 600, 480);
+		LeftDoor2 = MathTools.part(this, 150, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 120F - shift, 600, 480);
+		RightDoor2 = MathTools.part(this, 190, 260, 0, 0, 0, 1, 34, 16, -21, -24F, 136F - shift, 600, 480);
 		//LeftDoor3 = MathTools.part(this, 150, 260, 0, 0, 0, 1, 34, 16, 20, -24F, 264F - shift, 600, 480);
 		//RightDoor3 = MathTools.part(this, 190, 260, 0, 0, 0, 1, 34, 16, 20, -24F, 280 - shift, 600, 480);
-		LeftBar = MathTools.part(this, 0, -266, 0, 0, 0, 0, 12, 288, 18F, -24F, 40 - shift, 600, 480);
-		RightBar = MathTools.part(this, 0, -252, 0, 0, 0, 0, 12, 288, -18F, -24F, 40 - shift, 600, 480);
+		LeftBar = MathTools.part(this, 0, 288, 0, 0, 0, 0, 12, 176, 18F, -24F, 40 - shift, 600, 480);
+		RightBar = MathTools.part(this, 0, 288, 0, 0, 0, 0, 12, 176, -18F, -24F, 40 - shift, 600, 480);
 		FrontPanel = MathTools.part(this, 205, 150, 0, 0, 0, 38, 38, 1, -19F, -30, 40 - shift, 600, 480);
 		Panel1 = MathTools.part(this, 245, 200, 0, 0, 0.5F, 6, 32, 0, 12F, -24F, 68F - shift, 600, 480);
 		Panel2 = MathTools.part(this, 245, 200, 0, 0, -0.5F, 6, 32, 0, 12F, -24F, 108F - shift, 600, 480);
@@ -231,14 +231,14 @@ public class ModelJKBus extends ModelBase {
 		LeftBackWall = MathTools.part(this, 70, 220, -1F, 0, 0, 1, 50, 33, 20, -34F, 328F - shift, 600, 480);
 		Side1L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 40 - shift, 600, 480);
 		Side2L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 104F - shift, 600, 480);
-        Side3L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 168F - shift, 600, 480);
-        Side5L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 232F - shift, 600, 480);
-		Side4L = MathTools.part(this, 450, 130, 0, 0, 0, 1, 32, 32, 19F, -24F, 296F - shift, 600, 480);
+        //Side3L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 168F - shift, 600, 480);
+        //Side5L = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, 19F, -24F, 232F - shift, 600, 480);
+		Side4L = MathTools.part(this, 450, 114, 0, 0, 0, 1, 32, 48, 19F, -24F, 168F - shift, 600, 480);
 		//Side1R = MathTools.part(this, 450, 320, 0, 0, 0, 1, 32, 32, -20, -24F, 40 - shift, 600, 480);
-		Side2R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 136F - shift, 600, 480);
+		Side2R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 120F - shift, 600, 480);
 		//Side3R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 200 - shift, 600, 480);
 		Side4R = MathTools.part(this, 450, 320, 0, 0, 0, 1, 32, 32, -20, -24F, 136F - shift, 600, 480);
-		Side5R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 264F - shift, 600, 480);
+		Side5R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 216F - shift, 600, 480);
 		Side6R = MathTools.part(this, 450, 200, 0, 0, 0, 1, 32, 64, -19F, -24F, 328F - shift, 600, 480);
 		SideDisplay = MathTools.part(this, 10, 50, 0, 0, 0, 2, 7, 24, 17F, -24F, 236F - shift, 600, 480);
         SideDisplayFront = MathTools.part(this, 10, 50, 0, 0, 0, 2, 7, 24, 17F, -14F, 108F - shift, 600, 480);
@@ -246,7 +246,7 @@ public class ModelJKBus extends ModelBase {
 
 		textureWidth = 8;
 		textureHeight = 4;
-		DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 358F - shift, 8, 4);
+		DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 216F - shift, 8, 4);
 
 		textureWidth = 18;
 		textureHeight = 5;
@@ -260,7 +260,7 @@ public class ModelJKBus extends ModelBase {
 		textureHeight = 3;
 		DSide2 = MathTools.part(this, 0, 0, -0.1F, 0, 0, 0, 3, 24, 17F, -24F, 236F - shift, 24, 3);
 
-		setRotation(Back, 0.0949459F, 0, 0);
+		setRotation(Back, 0, 0, 0);
 		setRotation(LeftFrontWall, 0, 0, 0);
 		setRotation(RightFrontWall, 0, 0, 0);
 		setRotation(FrontDisplay, 0.0698132F, 0, 0);
@@ -315,8 +315,8 @@ public class ModelJKBus extends ModelBase {
 		RightFrontWall.render(f5);
 		FrontDisplay.render(f5);
 		Front.render(f5);
-		LeftOuterBar.render(f5);
-		RightOuterBar.render(f5);
+		//LeftOuterBar.render(f5);
+		//RightOuterBar.render(f5);
 		LeftBar.render(f5);
 		RightBar.render(f5);
 		FrontPanel.render(f5);
@@ -332,22 +332,22 @@ public class ModelJKBus extends ModelBase {
 		Roof2.render(f5);
 		Roof3.render(f5);
 		Roof4.render(f5);
-		Roof5.render(f5);
-		Roof6.render(f5);
-		Roof7.render(f5);
-		Roof7L.render(f5);
-		Roof7R.render(f5);
+		//Roof5.render(f5);
+		//Roof6.render(f5);
+		//Roof7.render(f5);
+		//Roof7L.render(f5);
+		//Roof7R.render(f5);
 		Floor1.render(f5);
 		Floor1L.render(f5);
 		Floor1R.render(f5);
 		Floor2.render(f5);
 		Floor3.render(f5);
 		Floor4.render(f5);
-		Floor5.render(f5);
-		Floor6.render(f5);
-		Floor7.render(f5);
-		Floor7L.render(f5);
-		Floor7R.render(f5);
+		//Floor5.render(f5);
+		//Floor6.render(f5);
+		//Floor7.render(f5);
+		//Floor7L.render(f5);
+		//Floor7R.render(f5);
 		//DoorEdge1.render(f5);
 		//DoorEdge2.render(f5);
 		//DoorEdge3.render(f5);
@@ -361,15 +361,15 @@ public class ModelJKBus extends ModelBase {
 		Pole25c.render(f5);
 		Pole3.render(f5);
 		Pole4.render(f5);
-		Pole45.render(f5);
-		Pole45b.render(f5);
-		Pole45c.render(f5);
+		//Pole45.render(f5);
+		//Pole45b.render(f5);
+		//Pole45c.render(f5);
 		Pole5.render(f5);
 		Pole6.render(f5);
 		HPole2.render(f5);
 		HPole3.render(f5);
 		HPole4.render(f5);
-		HPole5.render(f5);
+		//HPole5.render(f5);
 		Pole01.render(f5);
 		Pole01b.render(f5);
 		Pole01c.render(f5);
@@ -382,21 +382,21 @@ public class ModelJKBus extends ModelBase {
 		Pole04.render(f5);
 		Pole04b.render(f5);
 		Pole04c.render(f5);
-		Pole05.render(f5);
-		Pole05b.render(f5);
-		Pole05c.render(f5);
-		Pole06.render(f5);
-		Pole06b.render(f5);
-		Pole06c.render(f5);
-		Pole07.render(f5);
-		Pole07b.render(f5);
-		Pole07c.render(f5);
-		Pole08.render(f5);
-		Pole08b.render(f5);
-		Pole08c.render(f5);
-		HPoleRight.render(f5);
-		RightBackWall.render(f5);
-		LeftBackWall.render(f5);
+		//Pole05.render(f5);
+		//Pole05b.render(f5);
+		//Pole05c.render(f5);
+		//Pole06.render(f5);
+		//Pole06b.render(f5);
+		//Pole06c.render(f5);
+		//Pole07.render(f5);
+		//Pole07b.render(f5);
+		//Pole07c.render(f5);
+		//Pole08.render(f5);
+		//Pole08b.render(f5);
+		//Pole08c.render(f5);
+		//HPoleRight.render(f5);
+		//RightBackWall.render(f5);
+		//LeftBackWall.render(f5);
 		Side1L.render(f5);
 		Side3L.render(f5);
 		Side2L.render(f5);
@@ -407,7 +407,7 @@ public class ModelJKBus extends ModelBase {
 		//Side3R.render(f5);
 		Side4R.render(f5);
 		Side5R.render(f5);
-		Side6R.render(f5);
+		//Side6R.render(f5);
 		//SideDisplay.render(f5);
 		//SideDisplay2.render(f5);
         //SideDisplayFront.render(f5);
@@ -429,16 +429,17 @@ public class ModelJKBus extends ModelBase {
 	}
 
 	public void renderDoors(float f5, float movedoor) {
+		//LeftDoor1.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
+        //LeftDoor1.offsetX  = 0.875F * movedoor;
+		//RightDoor1.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
+       // RightDoor1.offsetX  = 0.875F * movedoor-(float)Math.sin(movedoor*3.14f/2f);
+       // RightDoor1.offsetZ = 0.875F * movedoor;
         LeftDoor1.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
         LeftDoor1.offsetX  = 0.875F * movedoor;
-        RightDoor1.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
-        RightDoor1.offsetX  = 0.875F * movedoor-(float)Math.sin(0.875F*movedoor*3.14f/2f);
-        RightDoor1.offsetZ = 0.875F * movedoor;
-        //LeftDoor1.rotateAngleY  = 0.875F * movedoor*3.14f/2f;
+        //LeftDoor1.offsetX  = 0.875F * movedoor;
        // RightDoor1.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
-        //RightDoor1.offsetX  = (float)Math.sin(0.875F*movedoor*3.14f/2f);
-        //RightDoor1.offsetZ = -1F+(float)Math.cos(0.875F*movedoor*3.14f/2f);
-        
+       //RightDoor1.offsetX  = (float)Math.sin(0.875F*movedoor*3.14f/2f);
+       // RightDoor1.offsetZ = -1F+(float)Math.cos(0.875F*movedoor*3.14f/2f);
         
         LeftDoor2.rotateAngleY  = -0.875F * movedoor*3.14f/2f;
         LeftDoor2.offsetX  = 0.875F * movedoor;
@@ -467,7 +468,7 @@ public class ModelJKBus extends ModelBase {
 	}
 
 	public void renderDisplay3(float f5) {
-		DSide2.render(f5);
+		//DSide2.render(f5);
 	}
 
 	public void renderDisplay4(float f5) {
@@ -479,6 +480,12 @@ public class ModelJKBus extends ModelBase {
 		model.rotateAngleY = y;
 		model.rotateAngleZ = z;
 	}
+    
+    private void setScale(ModelRenderer model, float x, float y, float z) {
+        model.rotateAngleX = x;
+        model.rotateAngleY = y;
+        model.rotateAngleZ = z;
+    }
 
 	@Override
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity) {
