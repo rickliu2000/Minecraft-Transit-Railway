@@ -174,7 +174,7 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
                     a = front ? 6 : 0;
                 if (this instanceof EntityJKBus)
                     a = front ? 6 : 0;
-                if (this instanceof EntityShort)
+                if (this instanceof EntityPepperlandShuttle)
                     a = front ? 6 : 0;
 				if (this instanceof EntitySP1900) {
 					a = front ? 4 : -4;

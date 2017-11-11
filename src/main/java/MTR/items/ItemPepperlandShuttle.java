@@ -2,7 +2,7 @@ package MTR.items;
 
 import java.util.List;
 
-import MTR.EntityShort;
+import MTR.EntityPepperlandShuttle;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,19 +10,19 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemShort extends ItemSpawnTrain<EntityShort> {
+public class ItemPepperlandShuttle extends ItemSpawnTrain<EntityPepperlandShuttle> {
 
-	private static final String[] name = { "ItemShort11",};
-	private static final String name2 = "ItemShort1";
+	private static final String[] name = { "ItemPepperlandShuttle11",};
+	private static final String name2 = "ItemPepperlandShuttle1";
 
-	public ItemShort () {
+	public ItemPepperlandShuttle () {
 		super(name, name2);
 		setHasSubtypes(true);
 	}
 
 	@Override
-	protected EntityShort createTrain(World worldIn, double x, double y, double z, boolean f, int h) {
-		return new EntityShort(worldIn, x, y, z, f, h);
+	protected EntityPepperlandShuttle createTrain(World worldIn, double x, double y, double z, boolean f, int h) {
+		return new EntityPepperlandShuttle(worldIn, x, y, z, f, h);
 	}
 
 	@Override

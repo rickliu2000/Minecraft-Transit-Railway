@@ -5,7 +5,7 @@ import MTR.EntityLightRail1;
 import MTR.EntityMinecartSpecial;
 import MTR.EntitySP1900;
 import MTR.EntityJKBus;
-import MTR.EntityShort;
+import MTR.EntityPepperlandShuttle;
 import MTR.GUIMakePlatform;
 import MTR.GUIMap;
 import MTR.GUIPSD;
@@ -72,7 +72,7 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityLightRail1.class, RenderLightRail1::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntitySP1900.class, RenderSP1900::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityJKBus.class, RenderJKBus::new);
-         RenderingRegistry.registerEntityRenderingHandler(EntityShort.class, RenderShort::new);
+         RenderingRegistry.registerEntityRenderingHandler(EntityPepperlandShuttle.class, RenderPepperlandShuttle::new);
 		// obj
 		OBJLoader.INSTANCE.addDomain("mtr");
 	}

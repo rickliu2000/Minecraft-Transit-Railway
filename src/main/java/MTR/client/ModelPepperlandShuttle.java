@@ -5,7 +5,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelShort extends ModelBase {
+public class ModelPepperlandShuttle extends ModelBase {
 
 	int digit1, digit2, digit3, a;
 	boolean p;
@@ -23,25 +23,28 @@ public class ModelShort extends ModelBase {
     ModelRenderer topBarOutRight;
     ModelRenderer top;
     ModelRenderer bottom;
-    
+    ModelRenderer DFront;
+    ModelRenderer DSide1;
+    ModelRenderer DFrontSticker;
+    ModelRenderer DBackSticker;
 	//final int shift = 128;
 
-	public ModelShort() {
+	public ModelPepperlandShuttle() {
 		textureWidth = 600;
 		textureHeight = 480;
 
 		back = MathTools.part(this, 0, 90, 0, 0, 0, 40, 40, 1, -20F, -32F, 100F , 600, 480);
-		front = MathTools.part(this, 0, 0, 0, 0, 0, 40, 40, 4, -20F, -32F, -100f, 600, 480);
-        door1 = MathTools.part(this, 90, 0, 0, 0, 0, 1, 32, 16, -20F, -25F, -96f, 600, 480);
-		leftDoor= MathTools.part(this, 90, 0, 0, 0, 0, 1, 32, 16, -20F, -25F, -16f, 600, 480);
-        rightDoor= MathTools.part(this, 120, 0, 0, 0, 0, 1, 32, 16, -20F, -25F, 0f, 600, 480);
-        leftWall= MathTools.part(this, 0, 225, 0, 0, 0, 1, 32, 200, 19F, -25F, -100f, 600, 480);
-        rightWall1=MathTools.part(this, 240, 250, 0, 0, 0, 1, 32, 65, -20F, -25F, -80f, 600, 480);
-        rightWall2=MathTools.part(this, 0, 230, 0, 0, 0, 1, 32, 84, -20F, -25F, 16f, 600, 480);
+		front = MathTools.part(this, 0, 0, 0, 0, 0, 40, 42, 4, -20F, -32F, -100f, 600, 480);
+        door1 = MathTools.part(this, 90, 0, 0, 0, 0, 1, 36, 16, -19.5F, -25F, -96f, 600, 480);
+		leftDoor= MathTools.part(this, 90, 0, 0, 0, 0, 1, 36, 16, -19.5F, -25F, -16f, 600, 480);
+        rightDoor= MathTools.part(this, 140, 0, 0, 0, 0, 1, 36, 16, -19.5F, -25F, 0f, 600, 480);
+        leftWall= MathTools.part(this, 0, 230, 0, 0, 0, 1, 36, 196, 19F, -25F, -96f, 600, 480);
+        rightWall1=MathTools.part(this, 240, 250, 0, 0, 0, 1, 36, 65, -20F, -25F, -80f, 600, 480);
+        rightWall2=MathTools.part(this, 0, 230, 0, 0, 0, 1, 36, 84, -20F, -25F, 16f, 600, 480);
         topBarOutLeft=MathTools.part(this, 0, 15, 0, 0, 0, 1, 7, 196, 19F, -32F, -96f, 600, 480);
         topBarOutRight=MathTools.part(this, 0, 15, 0, 0, 0, 1, 7, 196, -20F, -32F, -96f, 600, 480);
-        top=MathTools.part(this, 5, 0, 0, 0, 0, 40, 1, 201, -20F, -32F, -100F, 600, 480);
-        bottom=MathTools.part(this, 5, 0, 0, 0, 0, 40, 1, 201, -20F, 6F, -100F, 600, 480);
+        top=MathTools.part(this, 60, 0, 0, 0, 0, 38, 1, 196, -19F, -32F, -96F, 600, 480);
+        bottom=MathTools.part(this, 60, 0, 0, 0, 0, 38, 1, 196, -19F, 6F, -96F, 600, 480);
 		
         textureWidth = 8;
 		textureHeight = 4;
@@ -49,11 +52,20 @@ public class ModelShort extends ModelBase {
 
 		textureWidth = 18;
 		textureHeight = 5;
-		//DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 18, 5, 0, -9F, -32F, 9 - shift, 18, 5);
+		DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 18, 5, 0, -9F, -29F, -100, 18, 5);
+        
+        textureWidth = 4;
+        textureHeight = 4;
+        DFrontSticker = MathTools.part(this, 0, 0, 0, 0, -0.1F, 4, 4, 0, -18F, -6, -100, 4, 4);
+        
+        textureWidth = 4;
+        textureHeight = 4;
+        DBackSticker = MathTools.part(this, 0, 0, 0, 0, 0.1F, 4, 4, 0, -18F, -6, 101, 4, 4);
+                                       
 
 		textureWidth = 22;
 		textureHeight = 6;
-		//DSide1 = MathTools.part(this, 0, 2, -0.1F, 0, 0, 0, 6, 22, -20, -6F, 76F - shift, 22, 6);
+		DSide1 = MathTools.part(this, 0, 2, -0.1F, 0, 0, 0, 6, 22, -20, -5F, -75, 22, 6);
 
 		
 
@@ -113,19 +125,19 @@ public class ModelShort extends ModelBase {
 	}
 
 	public void renderDisplay1(float f5) {
-		//DFront.render(f5);
+		DFront.render(f5);
 	}
 
 	public void renderDisplay2(float f5) {
-		//DSide1.render(f5);
+		DSide1.render(f5);
 	}
 
 	public void renderDisplay3(float f5) {
-		//DSide2.render(f5);
+		DFrontSticker.render(f5);
 	}
 
 	public void renderDisplay4(float f5) {
-		//DBack.render(f5);
+		DBackSticker.render(f5);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {

@@ -9,18 +9,18 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 
-public class EntityShort extends EntityTrainBase {
+public class EntityPepperlandShuttle extends EntityTrainBase {
 
 	private static final DataParameter<Integer> MTR_ROUTE = EntityDataManager.<Integer>createKey(EntityTrainBase.class,
 			DataSerializers.VARINT);
 
-	public EntityShort(World world) {
+	public EntityPepperlandShuttle(World world) {
 		super(world);
 		doorOpen = MTRSounds.lightrail1Dooropen;
 		doorClose = MTRSounds.lightrail1Doorclose;
 	}
 
-	public EntityShort(World world, double x, double y, double z, boolean f, int h) {
+	public EntityPepperlandShuttle(World world, double x, double y, double z, boolean f, int h) {
 		super(world, x, y, z, f, h);
 		doorOpen = MTRSounds.lightrail1Dooropen;
 		doorClose = MTRSounds.lightrail1Doorclose;
@@ -41,12 +41,12 @@ public class EntityShort extends EntityTrainBase {
 
 	private void setRouteBehind() {
 		try {
-			EntityShort entityBack;
+			EntityPepperlandShuttle entityBack;
 			MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance().getServer();
 			if (front)
-				entityBack = (EntityShort) server.getEntityFromUuid(uuidWheel);
+				entityBack = (EntityPepperlandShuttle) server.getEntityFromUuid(uuidWheel);
 			else
-				entityBack = (EntityShort) server.getEntityFromUuid(uuidConnected);
+				entityBack = (EntityPepperlandShuttle) server.getEntityFromUuid(uuidConnected);
 			entityBack.setRoute(getRoute());
 			entityBack.setRouteBehind();
 		} catch (Exception e) {
@@ -63,7 +63,7 @@ public class EntityShort extends EntityTrainBase {
 
 	@Override
 	public int getTrainLength() {
-		return 14;
+		return 6;
 	}
 
 	@Override

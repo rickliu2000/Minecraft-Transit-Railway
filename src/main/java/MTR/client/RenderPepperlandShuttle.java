@@ -2,23 +2,23 @@ package MTR.client;
 
 import java.io.IOException;
 import java.util.stream.IntStream;
-import MTR.EntityShort;
+import MTR.EntityPepperlandShuttle;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 
-public class RenderShort extends RenderTrain<EntityShort> {
+public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle> {
 
-	private ModelShort model = new ModelShort();
+	private ModelPepperlandShuttle model = new ModelPepperlandShuttle();
     //private ModelLightRail1 model = new ModelLightRail1();
 
-	public RenderShort(RenderManager renderManager) {
+	public RenderPepperlandShuttle(RenderManager renderManager) {
 		super(renderManager);
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityShort entity) {
+	protected ResourceLocation getEntityTexture(EntityPepperlandShuttle entity) {
         int route = entity.getRoute();
         int[] CB = {11};
         int[] JiangNan = {2};
@@ -48,7 +48,7 @@ public class RenderShort extends RenderTrain<EntityShort> {
 	}
 
 	@Override
-	protected void render(EntityShort entity, float leftDoor, float rightDoor) {
+	protected void render(EntityPepperlandShuttle entity, float leftDoor, float rightDoor) {
 		int route = entity.getRoute();
 		boolean p;
 		boolean down = route < 0;
@@ -60,6 +60,7 @@ public class RenderShort extends RenderTrain<EntityShort> {
 		ResourceLocation texture3 = getSignTexture(route, p, down ? 4 : 3);
 		ResourceLocation texture4 = getSignTexture(route, p, down ? 6 : 5);
 		ResourceLocation texture5 = getSignTexture(route, p, 7);
+        ResourceLocation texture6 = getSignTexture(route, p, 8);
 
 		model.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 
@@ -69,27 +70,27 @@ public class RenderShort extends RenderTrain<EntityShort> {
 		else
 			rightDoor = 0;
 		model.renderDoors(0.0625F, rightDoor);
-        /*
+        
 		GlStateManager.disableLighting();
 		bindTexture(texture2);
 		model.renderDisplay1(0.0625F);
 		bindTexture(texture3);
 		model.renderDisplay2(0.0625F);
-		bindTexture(texture4);
+		bindTexture(texture6);
 		model.renderDisplay3(0.0625F);
-		bindTexture(texture5);
+		bindTexture(texture6);
 		model.renderDisplay4(0.0625F);
 		GlStateManager.enableLighting();
-         */
+        
 	}
 
 	private ResourceLocation getSignTexture(int route, boolean p, int n) {
 		ResourceLocation texture = new ResourceLocation(
-				"mtr:textures/displays/lightrail/MTR-" + route + (p ? "P-" : "-") + n + ".png");
+				"mtr:textures/displays/bus/bus-" + route + (p ? "P-" : "-") + n + ".png");
 		try {
 			Minecraft.getMinecraft().getResourceManager().getResource(texture);
 		} catch (IOException e) {
-			texture = new ResourceLocation("mtr:textures/entity/MTR-default-" + n + ".png");
+			texture = new ResourceLocation("mtr:textures/entity/bus-default-" + n + ".png");
 		}
 		return texture;
 	}

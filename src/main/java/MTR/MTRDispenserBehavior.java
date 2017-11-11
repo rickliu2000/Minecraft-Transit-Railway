@@ -66,7 +66,7 @@ public class MTRDispenserBehavior {
         }
     }
     
-    public static class DispenseShort extends BehaviorDefaultDispenseItem {
+    public static class DispensePepperlandShuttle extends BehaviorDefaultDispenseItem {
         @Override
         protected ItemStack dispenseStack(IBlockSource source, ItemStack stack) {
             World worldIn = source.getWorld();
@@ -75,7 +75,7 @@ public class MTRDispenserBehavior {
             if (!(worldIn.getBlockState(pos).getBlock() instanceof BlockRailBooster))
                 pos = source.getBlockPos().offset(facing, 2);
             if (!worldIn.isRemote && worldIn.getBlockState(pos).getBlock() instanceof BlockRailBooster)
-                MTRItems.itemshort.onItemUse(stack, null, worldIn, pos, EnumHand.MAIN_HAND, facing, pos.getX(),
+                MTRItems.itemPepperlandShuttle.onItemUse(stack, null, worldIn, pos, EnumHand.MAIN_HAND, facing, pos.getX(),
                                              pos.getY(), pos.getZ());
             return stack;
         }
