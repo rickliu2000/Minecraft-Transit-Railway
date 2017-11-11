@@ -14,7 +14,7 @@ public class MTREventHandler {
 			if (entityTrain.leftDoor > 0 || entityTrain.rightDoor > 0) {
 				EntityPlayer entityPlayer = (EntityPlayer) event.getEntityMounting();
 				double a = Math.toRadians(entityTrain.rotationYaw
-						+ (entityTrain.rightDoor > 0 && !(entityTrain instanceof EntityLightRail1) && !(entityTrain instanceof EntityShort)&& !(entityTrain instanceof EntityJKBus)? 0 : 180));
+						+ (entityTrain.rightDoor > 0 && !(entityTrain instanceof EntityLightRail1)? 0 : 180));
 				entityPlayer.posX = entityPlayer.posX + 3.5D * Math.sin(a);
 				entityPlayer.posZ = entityPlayer.posZ + 3.5D * Math.cos(a);
 				if (entityTrain instanceof EntityMinecartSpecial)
