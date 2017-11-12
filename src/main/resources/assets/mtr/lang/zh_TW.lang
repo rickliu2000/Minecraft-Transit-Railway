@@ -1,4 +1,5 @@
 item.ItemLightRail1.name=輕鐵 1
+item.ItemPepperlandShuttle1.name=Pepperland Shuttle
 item.ItemJKBus1.name=南京健康巴士
 item.ItemSP1900.name=SP1900
 item.ItemMinecartSpecial.name=挖路車
@@ -78,6 +79,7 @@ gui.boostto=加速到
 gui.slowto=減速到
 gui.trainspeed=車速:
 
+gui.pepperlandshuttle=能夠在狹窄路面轉彎的巴士
 gui.jkb=南京最老的掉喇叭巴士
 gui.lrt1=輕鐵第一代列車
 gui.lrt2=輕鐵第四代列車

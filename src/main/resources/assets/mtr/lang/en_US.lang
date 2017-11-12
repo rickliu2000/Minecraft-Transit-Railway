@@ -1,5 +1,6 @@
 item.ItemLightRail1.name=Light Rail 1
 item.ItemJKBus1.name=Nanjing JianKang Bus
+item.ItemPepperlandShuttle1.name=Pepperland Shuttle
 item.ItemSP1900.name=SP1900
 item.ItemMinecartSpecial.name=The Mining Cart
 item.ItemBrush.name=Brush
@@ -78,6 +79,7 @@ gui.boostto=Boost to
 gui.slowto=Slow to
 gui.trainspeed=Train speed:
 
+gui.pepperlandshuttle=A rather short bus which could turn sharply
 gui.jkb=the oldest JK bus without a functioning loudspeaker
 gui.lrt1=LRT Phase 1 train
 gui.lrt2=LRT Phase 4 train

@@ -46,7 +46,7 @@ public class ItemPepperlandShuttle extends ItemSpawnTrain<EntityPepperlandShuttl
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
 		list.add(String.valueOf(stack.getMetadata() + 1) + " " + I18n.format("gui.car", new Object[0]));
-		list.add(I18n.format("gui.jkb", new Object[0]));
+		list.add(I18n.format("gui.pepperlandshuttle", new Object[0]));
 	}
 
 	@Override

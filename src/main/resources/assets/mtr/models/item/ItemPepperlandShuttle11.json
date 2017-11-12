@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-          "layer0": "mtr:items/ItemJK"
+        "layer0": "mtr:items/ItemJK"
     }
 }
