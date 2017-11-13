@@ -162,6 +162,10 @@ EntityRegistry.registerModEntity(EntityPepperlandShuttle.class, "PepperlandShutt
 				new MTRDispenserBehavior.DispenseKillTrain());
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemlightrail1,
 				new MTRDispenserBehavior.DispenseLightRail1());
+        BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemjkbus,
+                new MTRDispenserBehavior.DispenseJKBus());
+        BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemPepperlandShuttle,
+                new MTRDispenserBehavior.DispensePepperlandShuttle());
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemsp1900,
 				new MTRDispenserBehavior.DispenseSP1900());
 
