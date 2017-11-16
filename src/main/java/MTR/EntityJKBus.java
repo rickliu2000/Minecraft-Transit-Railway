@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 
 public class EntityJKBus extends EntityTrainBase {
 
-	private static final DataParameter<Integer> MTR_ROUTE = EntityDataManager.<Integer>createKey(EntityTrainBase.class,
+	private static final DataParameter<Integer> JKBUS_ROUTE = EntityDataManager.<Integer>createKey(EntityTrainBase.class,
 			DataSerializers.VARINT);
 
 	public EntityJKBus(World world) {
@@ -54,11 +54,11 @@ public class EntityJKBus extends EntityTrainBase {
 	}
 
 	private void setRoute(int route) {
-		dataManager.set(MTR_ROUTE, route);
+		dataManager.set(JKBUS_ROUTE, route);
 	}
 
 	public int getRoute() {
-		return dataManager.get(MTR_ROUTE);
+		return dataManager.get(JKBUS_ROUTE);
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class EntityJKBus extends EntityTrainBase {
 	@Override
 	protected void entityInit() {
 		super.entityInit();
-		dataManager.register(MTR_ROUTE, new Integer(0)); // route number
+		dataManager.register(JKBUS_ROUTE, new Integer(0)); // route number
 	}
 
 	@Override
