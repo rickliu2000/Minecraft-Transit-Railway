@@ -36,6 +36,7 @@ public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle
         if (p)
             route = route - 1000;
         final int compareRoute=route;
+        //System.out.println("route "+route);
         isCB = IntStream.of(CB).anyMatch(x -> x == compareRoute);
         isJiangNan = IntStream.of(JiangNan).anyMatch(x -> x == compareRoute);
         ResourceLocation skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanShort.png");
@@ -60,7 +61,7 @@ public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle
 		ResourceLocation texture3 = getSignTexture(route, p, down ? 4 : 3);
 		ResourceLocation texture4 = getSignTexture(route, p, down ? 6 : 5);
 		ResourceLocation texture5 = getSignTexture(route, p, 7);
-        ResourceLocation texture6 = getSignTexture(route, p, 8);
+       // ResourceLocation texture6 = getSignTexture(route, p, 8);
 
 		model.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 
@@ -76,10 +77,11 @@ public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle
 		model.renderDisplay1(0.0625F);
 		bindTexture(texture3);
 		model.renderDisplay2(0.0625F);
-		bindTexture(texture6);
+		/*bindTexture(texture6);
 		model.renderDisplay3(0.0625F);
 		bindTexture(texture6);
 		model.renderDisplay4(0.0625F);
+         */
 		GlStateManager.enableLighting();
         
 	}

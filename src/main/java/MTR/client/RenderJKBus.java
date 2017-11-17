@@ -36,6 +36,7 @@ public class RenderJKBus extends RenderTrain<EntityJKBus> {
         if (p)
             route = route - 1000;
         final int compareRoute=route;
+        //System.out.println("route "+route);
         isCB = IntStream.of(CB).anyMatch(x -> x == compareRoute);
         isJiangNan = IntStream.of(JiangNan).anyMatch(x -> x == compareRoute);
         ResourceLocation skin = new ResourceLocation("mtr:textures/entity/skins/JiangNanJK.png");

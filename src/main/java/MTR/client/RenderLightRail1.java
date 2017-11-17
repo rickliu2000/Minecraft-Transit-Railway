@@ -36,6 +36,7 @@ public class RenderLightRail1 extends RenderTrain<EntityLightRail1> {
         if (p)
             route = route - 1000;
         final int compareRoute=route;
+        //System.out.println("route "+route);
         isCB = IntStream.of(CB).anyMatch(x -> x == compareRoute);
         isJiangNan = IntStream.of(JiangNan).anyMatch(x -> x == compareRoute);
         ResourceLocation skin = new ResourceLocation("mtr:textures/entity/EntityLightRail1.png");

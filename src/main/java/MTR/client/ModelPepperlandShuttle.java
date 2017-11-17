@@ -50,9 +50,9 @@ public class ModelPepperlandShuttle extends ModelBase {
 		textureHeight = 4;
 		//DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 216F - shift, 8, 4);
 
-		textureWidth = 18;
+		textureWidth = 38;
 		textureHeight = 5;
-		DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 18, 5, 0, -9F, -29F, -100, 18, 5);
+		DFront = MathTools.part(this, 0, 0, 0, 0, -0.1F, 38, 5, 0, -19F, -29F, -100, 38, 5);
         
         textureWidth = 4;
         textureHeight = 4;
@@ -63,9 +63,9 @@ public class ModelPepperlandShuttle extends ModelBase {
         DBackSticker = MathTools.part(this, 0, 0, 0, 0, 0.1F, 4, 4, 0, -18F, -6, 101, 4, 4);
                                        
 
-		textureWidth = 22;
+		textureWidth = 25;
 		textureHeight = 6;
-		DSide1 = MathTools.part(this, 0, 2, -0.1F, 0, 0, 0, 6, 22, -20, -5F, -75, 22, 6);
+		DSide1 = MathTools.part(this, 0, 0, -0.1F, 0, 0, 0, 6, 25, -20, -24F, -74, 25, 6);
 
 		
 
