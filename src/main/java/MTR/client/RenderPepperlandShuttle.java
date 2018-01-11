@@ -67,7 +67,7 @@ public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle
 
 		rightDoor = 1 - rightDoor;
 		if (rightDoor < 1)
-			rightDoor = (float) (-7.9D * Math.pow(rightDoor, 3) + 12.66D * Math.pow(rightDoor, 2) - 5.75D * rightDoor + 1D);
+			rightDoor = (float)(1-Math.pow(rightDoor,2));
 		else
 			rightDoor = 0;
 		model.renderDoors(0.0625F, rightDoor);
@@ -77,8 +77,9 @@ public class RenderPepperlandShuttle extends RenderTrain<EntityPepperlandShuttle
 		model.renderDisplay1(0.0625F);
 		bindTexture(texture3);
 		model.renderDisplay2(0.0625F);
-		/*bindTexture(texture6);
-		model.renderDisplay3(0.0625F);
+		bindTexture(texture2);
+		model.renderDisplay5(0.0625F);
+        /*
 		bindTexture(texture6);
 		model.renderDisplay4(0.0625F);
          */

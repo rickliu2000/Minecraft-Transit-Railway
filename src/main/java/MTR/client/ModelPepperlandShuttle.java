@@ -24,6 +24,7 @@ public class ModelPepperlandShuttle extends ModelBase {
     ModelRenderer top;
     ModelRenderer bottom;
     ModelRenderer DFront;
+    ModelRenderer DBack;
     ModelRenderer DSide1;
     ModelRenderer DFrontSticker;
     ModelRenderer DBackSticker;
@@ -46,9 +47,9 @@ public class ModelPepperlandShuttle extends ModelBase {
         top=MathTools.part(this, 60, 0, 0, 0, 0, 38, 1, 196, -19F, -32F, -96F, 600, 480);
         bottom=MathTools.part(this, 60, 0, 0, 0, 0, 38, 1, 196, -19F, 6F, -96F, 600, 480);
 		
-        textureWidth = 8;
-		textureHeight = 4;
-		//DBack = MathTools.part(this, 0, 0, 0, 0, -0.8F, 8, 4, 0, -4F, -32F, 216F - shift, 8, 4);
+        textureWidth = 38;
+		textureHeight = 5;
+		DBack = MathTools.part(this, 0, 0, 0, 0, -0.1F, 38, 5, 0, -19F, -29F, 102, 38, 5);
 
 		textureWidth = 38;
 		textureHeight = 5;
@@ -65,7 +66,7 @@ public class ModelPepperlandShuttle extends ModelBase {
 
 		textureWidth = 25;
 		textureHeight = 6;
-		DSide1 = MathTools.part(this, 0, 0, -0.1F, 0, 0, 0, 6, 25, -20, -24F, -74, 25, 6);
+		DSide1 = MathTools.part(this, 0, 0, -0.1F, 0, 0, 0, 6, 25, -20, -10F, -74, 25, 6);
 
 		
 
@@ -139,6 +140,10 @@ public class ModelPepperlandShuttle extends ModelBase {
 	public void renderDisplay4(float f5) {
 		DBackSticker.render(f5);
 	}
+    
+    public void renderDisplay5(float f5) {
+        DBack.render(f5);
+    }
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {
 		model.rotateAngleX = x;
