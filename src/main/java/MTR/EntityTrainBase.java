@@ -170,16 +170,12 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 				double yaw = Math.toRadians(rotationYaw);
 				EntityPlayer entity = e.get(0);
 				int a = 0, b = 0;
-                if (this instanceof EntityLightRail1)
-                    a = front ? 6 : 0;
-                if (this instanceof EntityJKBus)
-                    a = front ? 6 : 0;
-                if (this instanceof EntityPepperlandShuttle)
-                    a = front ? 6 : 0;
 				if (this instanceof EntitySP1900) {
 					a = front ? 4 : -4;
 					b = front ? 8 : 0;
-				}
+                } else{
+                    a = front ? 6 : 0;
+                }
 				BlockPos pos0 = entity.getPosition();
 				BlockPos pos1 = new BlockPos(posX - a * Math.cos(yaw), posY, posZ + a * Math.sin(yaw));
 				BlockPos pos2 = new BlockPos(posX - b * Math.cos(yaw), posY, posZ + b * Math.sin(yaw));

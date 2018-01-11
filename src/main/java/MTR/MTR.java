@@ -99,7 +99,8 @@ public class MTR {
 		EntityRegistry.registerModEntity(EntityLightRail1.class, "LightRail1", 1, this, 256, 1, false);
 		EntityRegistry.registerModEntity(EntitySP1900.class, "SP1900", 2, this, 256, 1, false);
         EntityRegistry.registerModEntity(EntityJKBus.class, "JKBus", 3, this, 256, 1, false);
-EntityRegistry.registerModEntity(EntityPepperlandShuttle.class, "PepperlandShuttle", 4, this, 256, 1, false);
+        EntityRegistry.registerModEntity(EntityPepperlandShuttle.class, "PepperlandShuttle", 4, this, 256, 1, false);
+        EntityRegistry.registerModEntity(EntityPepperlandShuttleS1.class, "PepperlandShuttleS1", 5, this, 256, 1, false);
 		// tile entities
 		GameRegistry.registerTileEntity(TileEntityClockEntity.class, "MTRClock");
 		GameRegistry.registerTileEntity(TileEntityAPGGlassEntity.class, "APGGlass");
@@ -166,6 +167,8 @@ EntityRegistry.registerModEntity(EntityPepperlandShuttle.class, "PepperlandShutt
                 new MTRDispenserBehavior.DispenseJKBus());
         BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemPepperlandShuttle,
                 new MTRDispenserBehavior.DispensePepperlandShuttle());
+        BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemPepperlandShuttleS1,
+                new MTRDispenserBehavior.DispensePepperlandShuttleS1());
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(MTRItems.itemsp1900,
 				new MTRDispenserBehavior.DispenseSP1900());
 
