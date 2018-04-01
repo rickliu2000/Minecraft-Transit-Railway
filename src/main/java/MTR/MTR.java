@@ -97,7 +97,7 @@ public class MTR {
 		// entities
 		EntityRegistry.registerModEntity(EntityMinecartSpecial.class, "MinecartSpecial", 0, this, 80, 1, false);
 		EntityRegistry.registerModEntity(EntityLightRail1.class, "LightRail1", 1, this, 256, 1, false);
-		EntityRegistry.registerModEntity(EntitySP1900.class, "SP1900", 2, this, 256, 1, false);
+		//EntityRegistry.registerModEntity(EntitySP1900.class, "SP1900", 2, this, 256, 1, false);
         EntityRegistry.registerModEntity(EntityJKBus.class, "JKBus", 3, this, 256, 1, false);
         EntityRegistry.registerModEntity(EntityPepperlandShuttle.class, "PepperlandShuttle", 4, this, 256, 1, false);
         EntityRegistry.registerModEntity(EntityPepperlandShuttleS1.class, "PepperlandShuttleS1", 5, this, 256, 1, false);
