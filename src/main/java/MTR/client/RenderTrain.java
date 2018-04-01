@@ -88,7 +88,12 @@ public class RenderTrain<T extends EntityTrainBase> extends Render<T> {
 			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240, 240);
 			float leftDoor = entity.leftDoor / 60F;
 			float rightDoor = entity.rightDoor / 60F;
-			render(entity, leftDoor, rightDoor);
+            boolean isFront=entity.mtrFront;
+            if (!isFront){
+                render(entity, rightDoor, leftDoor);
+            } else {
+                render(entity, leftDoor, rightDoor);
+            }
 			GlStateManager.popMatrix();
 		} catch (Exception e) {
 		}

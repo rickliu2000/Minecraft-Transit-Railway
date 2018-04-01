@@ -61,7 +61,7 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 	protected boolean front;
     private static final DataParameter<Boolean> MTR_FRONT = EntityDataManager
     .<Boolean>createKey(EntityTrainBase.class, DataSerializers.BOOLEAN);
-    private boolean mtrFront;
+    public boolean mtrFront;
 
 	private Ticket trainTicket;
 	private static List<Ticket> allTickets;
@@ -220,7 +220,7 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 			setPosition(posX, posY, posZ);
 			setRotation(rotationYaw, rotationPitch);
 		}
-
+        mtrFront=getFront();
 		if (leftDoor < 0)
 			leftDoor = 0;
 		if (rightDoor < 0)
@@ -228,27 +228,19 @@ public class EntityTrainBase extends Entity implements LoadingCallback {
 		if (mtrSpeed == 0) {
 			mtrDoorLeft = getLeftDoor();
 			mtrDoorRight = getRightDoor();
-            mtrFront=getFront();
-            if (mtrFront){
-                if (leftDoor < 60 && mtrDoorLeft)
-                    leftDoor++;
-                if (rightDoor < 60 && mtrDoorRight)
-                    rightDoor++;
-                if (leftDoor > 0 && !mtrDoorLeft)
-                    leftDoor--;
-                if (rightDoor > 0 && !mtrDoorRight)
-                    rightDoor--;
-            }
+            /*
             if (!mtrFront){
-                if (rightDoor < 60 && mtrDoorLeft)
-                    rightDoor++;
-                if (leftDoor < 60 && mtrDoorRight)
-                    leftDoor++;
-                if (rightDoor > 0 && !mtrDoorLeft)
-                    rightDoor--;
-                if (leftDoor > 0 && !mtrDoorRight)
-                    leftDoor--;
-            }
+                mtrDoorLeft=!mtrDoorLeft;
+                mtrDoorRight=!mtrDoorRight;
+            }*/
+            if (leftDoor < 60 && mtrDoorLeft)
+                leftDoor++;
+            if (rightDoor < 60 && mtrDoorRight)
+                rightDoor++;
+            if (leftDoor > 0 && !mtrDoorLeft)
+                leftDoor--;
+            if (rightDoor > 0 && !mtrDoorRight)
+                rightDoor--;
 		}
 
 		if (isBeingRidden() && getPassengers().contains(Minecraft.getMinecraft().thePlayer)) {
